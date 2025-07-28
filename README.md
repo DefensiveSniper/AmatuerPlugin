@@ -1,4 +1,4 @@
-# HelloPlugin
+# AmatuerPlugin
 
 <!--
 ## 插件开发者详阅
