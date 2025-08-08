@@ -1,4 +1,4 @@
-# AmatuerPlugin
+# BilibiliReminder
 
 <!--
 ## 插件开发者详阅
