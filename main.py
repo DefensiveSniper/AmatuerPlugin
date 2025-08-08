@@ -7,13 +7,15 @@ import os
 import json
 import requests
 
+# 在https://github.com/Hanschase/BreminderPlugin的基础上进行的修改
+
 """查询频率，单位为秒，推荐为60"""
 CHECK_DELAY = 60
 """发生问题时，是否通知管理员(通知则把ID修改为机器人管理员的QQ)"""
 NOTIFY_ADMIN = False
 ADMIN_ID = None   # int
 
-@register(name="BilibiliReminder", description="订阅B站UP主的开播状态信息", version="1", author="Amateur")
+@register(name="BilibiliReminder", description="订阅B站UP主的开播状态信息", version="0.1", author="Amateur")
 class BilibiliReminder(BasePlugin):
     # 插件加载时触发
     def __init__(self, host: APIHost):
