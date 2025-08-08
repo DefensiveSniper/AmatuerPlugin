@@ -13,7 +13,7 @@ CHECK_DELAY = 60
 NOTIFY_ADMIN = False
 ADMIN_ID = None   # int
 
-@register(name="BilibiliReminder", description="订阅B站UP主的开播状态信息", version="0.5", author="Amateur")
+@register(name="BilibiliReminder", description="订阅B站UP主的开播状态信息", version="1", author="Amateur")
 class BilibiliReminder(BasePlugin):
     # 插件加载时触发
     def __init__(self, host: APIHost):
