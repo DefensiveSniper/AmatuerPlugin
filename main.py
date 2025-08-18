@@ -105,6 +105,11 @@ class BilibiliReminder(BasePlugin):
             up_name = data["data"]["by_room_ids"][room_id_real]["uname"]      # UP主
             room_url = data["data"]["by_room_ids"][room_id_real]["live_url"]  # 直播间地址
             atperson = MessageChain()
+
+            # 防止懒狗没设置封面报错
+            if room_cover == "":
+                room_cover = "https://hzihao.icu/wp-content/uploads/2025/07/cover1_compressed.png"
+            
             for person_id in self.subscription[group_id][room_id][1:]:  # 排除状态码
                 atperson.append(At(int(person_id)))
             await ctx.send_message("group",int(group_id),atperson + MessageChain([
